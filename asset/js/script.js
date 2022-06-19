@@ -127,7 +127,7 @@ function cekCuaca(data) {
 //coba pake async await
 const translate = async (text) =>{
     try{
-        let response =  await fetch(`https://amm-api-translate.herokuapp.com/translate?engine=google&text=${text}&to=indonesian`)
+        let response =  await fetch(`https://api-translate.azharimm.site/translate?engine=google&text=${text}&to=id`)
         let jsonData = await response.json()
         let hasil = jsonData.data.result
         console.log(hasil)
