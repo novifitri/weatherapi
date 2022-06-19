@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+header {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgb(94 234 212);
+}
+body {
+    background: url(../images/hujan2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* layout atas start*/
+.top-wrapper {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.top-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cityandday {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cityandday p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+#city {
+    font-size: 2.5rem;
+}
+
+.info {
+    align-self: flex-end;
+}
+.info span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.info #suhu{
+    background: url(../images/thermometer-temperature-svgrepo-com.svg);
+}
+.info p:nth-child(1) {
+    font-size: 2.5rem;
+}
+.info p:nth-child(2) {
+    font-size: 2rem;
+}
+.info #angin {
+    background: url(../images/angin.svg);
+}
+
+.icon-cuaca {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.icon-cuaca p {
+    align-self: center;
+}
+.icon-cuaca img {
+    width: 100px;
+}
+/* layout atas end */
+
+/* layout tengah start*/
+.search {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(20px);
+}
+.btn {
+    height: 35px;
+    width: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: url(../images/search2.svg);
+    background-size: cover;
+}
+.btn:hover {
+    background-color: rgb(94 234 212);
+}
+input[type="text"] {
+    width: 90%;
+    border: none;
+    background: transparent;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+    font-size: medium;
+    letter-spacing: 2px;
+}
+::placeholder {
+    font-size: medium;
+    font-weight: bold;
+}
+::selection {
+    background: #2FD9D9;
+}
+input[type="text"]:focus{
+    outline: none;
+    border: none;
+    border: 2px solid rgb(94 234 212);
+}
+
+.middle-wrapper ul {
+    display: none;
+}
+
+.error {
+    color: crimson;
+    font-style: italic;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 0 20px;
+}
+/* layout tengah end*/
+
+/* layout bawah start */
+aside > h3 {
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
+    margin-left: 25px;
+}
+.bottom-wrappper {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex-basis: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+.box:nth-child(1) {
+    flex-basis: 100%;
+    font-size: 1.8rem;
+}
+.box:nth-child(1) .bottom-details p {
+    font-size: 2rem;
+}
+.bottom-details {
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.bottom-details span {
+    flex-basis: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.bottom-details #suhu {
+    background-repeat: no-repeat;
+    background-image: url(../images/thermometer-temperature-svgrepo-com.svg);
+}
+.bottom-details #angin {
+    background-repeat: no-repeat;
+    background-image: url(../images/angin.svg);
+}
+/* layout bawah end */
+
+/* footer start */
+footer {
+    margin-top: 20px;
+    width: 100%;
+    background: rgb(94 234 212);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+}
+footer h1{
+    text-transform: uppercase;
+}
+footer ul {
+    list-style: none;
+}
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* alert */
+.alert {
+    display: flex;
+    background: rgb(94 234 212);
+    align-items: center;
+    font-size: 2rem;
+    width: fit-content;
+    border-left: 5px solid #2FD9D9;
+    position: fixed;
+    top: 55px;
+    right: 10px;
+    transform: translateX(190%);
+    transition: all  0.5s ease;
+    padding: 10px;
+}
+
+.alert.active {
+    transform: translateX(0);
+}
+.alert span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/close-outline.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.alert span:hover {
+    background: url(../images/close.svg);
+}
+
+/* footer end */
+.load{
+    background-color: #e5e5e5;
+    color: #0000;
+    background-image: linear-gradient(to right, #999, #ccc);
+    background-size: 200% 100%;
+    animation: load 1s linear infinite;
+}
+@keyframes load {
+    to{
+    background-position: -170% 0;
+
+    }
+}
+
+
+/* extra small device */
+@media only screen and (max-width: 600px) {
+    #city {
+        font-size: 1.5rem;
+    }
+    .info {
+        flex-basis: 90%;
+    }
+    .info p {
+        font-size: 1.2rem !important;
+    }
+    .info span {    
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat !important;
+
+    }
+ 
+    .box .bottom-details p {
+        font-size: 1rem !important;
+    }
+    
+    .icon-cuaca img {
+        width: 40%;
+    }
+    .icon-cuaca p{
+        align-self: flex-end;
+    }
+   
+
+}
+
+/* medium and large */
+@media only screen and (min-width: 768px) {
+    /* main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: calc(100vh - 48px);
+    } */
+    main {
+        min-height: calc(100vh - 48px);
+    }
+    header h1{
+        text-align: left;
+        margin-left: 30px;
+    }
+    .top-wrapper {
+        width: 50%;
+        margin-left: 20px;
+    }
+    .middle-wrapper {
+        margin-right: 20px;
+        width: 30%;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+    .middle-wrapper ul {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(20px);
+        list-style: none;
+        
+    }
+    .middle-wrapper ul li {
+        padding: 10px 20px;
+        font-size: 2rem;
+        font-weight: 600;
+        position: relative;
+    }
+    .middle-wrapper ul li::after{
+        content: '';
+        width: 90%;
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        left: 20px;
+        margin-bottom: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    .middle-wrapper ul li:hover::after{
+        background: rgb(94 234 212);
+    }
+    .middle-wrapper ul li:hover {
+        color: rgb(94 234 212);
+        
+    }
+    .search {
+        border-radius: 10px 10px 0 0;
+    }
+    .bottom-wrappper {
+        flex-wrap: nowrap;
+        width: 50%;
+        margin-left: 20px;
+    }
+ 
+    .box {
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: 0 !important;
+    }
+    .box h2{
+        font-size: 1.5rem;
+    }
+    .bottom-details span {
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: 0 !important;     
+    }
+    .bottom-details p {
+        font-size: 1rem !important;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        align-items: center;
+    }
+    footer a:hover {
+        color: white;
+    }
+    .alert h6 {
+        font-size: 1.5rem;
+    }
+}

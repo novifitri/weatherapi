@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Cuaca</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Cek Cuaca</h1>
+    </header>
+    <main>
+        <div class="top-wrapper container">
+            <div class="cityandday">
+                <h1 id="city">Kuching</h1>
+                <p>Today</p>
+            </div>
+            <div class="top-details">
+                <div class="info">
+                    <p><span id="suhu"></span>26 °C</p>
+                    <p><span id="angin"></span>17km/h</p>
+                </div>
+                <div class="icon-cuaca">
+                    <img src="asset/images/awan-sun.svg" alt="iconCuaca">
+                    <p>Berawan</p>
+                </div>
+            </div>      
+        </div>
+      
+        <div class="middle-wrapper container">
+            <form action="" class="search">
+                <input type="text" id="keyword" placeholder="cari lokasi...">
+                <button type="submit" class="btn"></button>
+            </form>
+            <p class="error"></p>
+            <ul class="searchCityBtn">
+                <li>Arab</li>
+                <li>Bandung</li>
+                <li>Yogyakarta</li>
+                <li>Pontianak</li>
+                <li>Kuching</li>             
+            </ul>
+        </div>
+        
+        <aside >
+            <h3>Ramalan Cuaca 3 hari kedepan</h3>
+            <div class="bottom-wrappper container">
+                <div class="box">
+                    <h2 class="date">Saturday 18 Maret 2022</h2>
+                    <div class="bottom-details">     
+                        <p><span id="suhu"></span>26 °C</p>          
+                        <p><span id="angin"></span>17km/h</p>
+                    </div>      
+                </div>
+                <div class="box">
+                    <h2 class="date">Monday</h2>
+                    <div class="bottom-details">
+                        <p><span id="suhu"></span>26 °C</p>
+                        <p><span id="angin"></span>17km/h</p>
+                    </div>    
+                </div>
+                <div class="box">
+                    <h2 class="date">Sunday</h2>
+                    <div class="bottom-details">
+                        <p><span id="suhu"></span>26 °C</p>
+                        <p><span id="angin"></span>17km/h</p>
+                    </div>    
+                </div>
+            </div>
+        </aside>
+
+        <div class="alert">
+            <img src="./asset/images/warning.png" alt="waningIcon">
+            <h6>Data tidak ditemukan</h6>
+            <span class="close-alert"></span>
+        </div>
+    </main>
+    <footer>
+        <h1>Cek Cuaca</h1>
+        <div class="resource">
+            <h2>Resource</h2>
+            <ul>
+                <li><a href="https://github.com/robertoduessmann/weather-api" target="_blank">Weather Api</a></li>
+                <li><a href="https://github.com/azharimm/api-translate" target="_blank">Translate Api</a></li>
+                <li><a href="https://unsplash.com/">Unsplash</a></li>
+                <li><a href="https://www.svgrepo.com/">SVGRepo</a></li>
+            </ul>
+     
+        </div>
+        <div class="copyright">
+            <h2>&copy; 2022</h2>
+            <p>Site created by Novi Fitri</p>
+        </div>
+    </footer>
+    <!-- <script src="asset/js/alertKu.js"></script> -->
+    <script src="asset/js/script.js"></script>
+</body>
+</html>
