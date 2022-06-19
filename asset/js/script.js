@@ -40,10 +40,12 @@ function getCuacaApi(city) {
                 setTimeout(()=>{
                     notFound.classList.remove("active")
                 }, 3000)
-                setLoading(false)
+           
             }else {
                 displayData(data, city)
+            
             }
+            setLoading(false)
         })
     })
     .catch(function (err){
