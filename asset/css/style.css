@@ -287,7 +287,9 @@ footer a {
         background-repeat: no-repeat !important;
 
     }
- 
+    .box  h2{
+        font-size: 1rem !important;
+    }
     .box .bottom-details p {
         font-size: 1rem !important;
     }
@@ -304,12 +306,6 @@ footer a {
 
 /* medium and large */
 @media only screen and (min-width: 768px) {
-    /* main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        min-height: calc(100vh - 48px);
-    } */
     main {
         min-height: calc(100vh - 48px);
     }

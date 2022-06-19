@@ -40,9 +40,9 @@ function getCuacaApi(city) {
                 setTimeout(()=>{
                     notFound.classList.remove("active")
                 }, 3000)
+                setLoading(false)
             }else {
                 displayData(data, city)
-                document.querySelector('#keyword').value = ""
             }
         })
     })
@@ -53,6 +53,7 @@ function getCuacaApi(city) {
         setTimeout(()=>{
             notFound.classList.remove("active")
         }, 3000)
+        setLoading(false)
         console.log(err)
     })
 }
@@ -83,10 +84,10 @@ async function displayData(data, key) {
     //tempel data yang baru
     suhu.insertAdjacentHTML("beforeend" , data.temperature.substring(1))
     angin.insertAdjacentHTML("beforeend", data.wind)
+    document.querySelector('#keyword').value = ""
     try {
         const weather = await translate(data.description)
         desc.textContent = weather
-        setLoading(false)
         cekCuaca(weather)
     }catch(err){
         desc.textContent = data.description
